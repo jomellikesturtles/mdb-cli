@@ -10,11 +10,18 @@ import (
 
 	// "fmt"
 	"log"
+	"mdb-cli/cmd"
 	"os"
 	// "rsc.io/quote"
 )
 
 func main() {
+	cmd.Execute()
+	// scan()
+}
+func main2() {
+
+	cmd.Execute()
 
 	// fmt.Println(quote.Go())
 	log.Println("HELLO WORLD")
@@ -31,6 +38,7 @@ func main() {
 func help() string {
 	return "version 1"
 }
+
 func scan() {
 	fetchMetadata("tt0120338")
 	log.Println("Scanning...")
