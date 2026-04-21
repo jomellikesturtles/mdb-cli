@@ -66,6 +66,7 @@ var authCmd = &cobra.Command{
 		viper.Set("auth.token", authToken)
 		viper.WriteConfig()
 
+		log.Println(viper.Get("auth.token"))
 		fmt.Println("Successfully authenticated!")
 		// fmt.Println(viper.ReadInConfig())
 	},
