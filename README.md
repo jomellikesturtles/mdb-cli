@@ -2,7 +2,6 @@
 
 cli written in go
 
-
 ### Commands, subcommands, flags
 
 | command       |            Description            |
@@ -34,14 +33,11 @@ Add folder to config
 Auth
 set token
 
-`go run --version=1`
+`go run main.go command arg1 arg2`
 
 `go build`
 
-
 TMDB_URL=https://api.themoviedb.org/3 TMDB_API_KEY=test go run main.go
-
-
 
 ```text
 mdb-cli/
@@ -58,3 +54,42 @@ mdb-cli/
 └── go.mod              # Dependencies
 
 ```
+
+Sample by Plex:
+
+Plex Media Scanner (c) 2010-2014 Plex Development Team.
+
+-h, --help Display this message.
+-v, --verbose Show more output.
+-p, --progress Show special progress output.
+--log-file-suffix Specify suffix for log file.
+
+Actions:
+
+-r, --refresh Refresh the metadata. Deprecated
+-a, --analyze Analyze media information.
+--analyze-deeply Fully read and perform deep media analysis.
+-b, --index Generate a media index file. (Video Preview Thumbnails) Deprecated
+-s, --scan Scan for new media. Deprecated
+-i, --info Get information.
+-l, --list List.
+-g, --generate Regenerate thumbnails/fanart.
+-t, --tree Show a section tree.
+-w, --reset Delete all media out of a section.
+-n, --add-section --type <type:1,2,8> --agent --location --lang Add a new section.
+-D, --del-section Delete a section.
+
+Items to which actions apply:
+
+-c, --section A library section ID.
+-o, --item An item ID.
+-d, --directory A directory path.
+-f, --file A file.
+
+Modifiers to actions:
+
+-x, --force Force an operation (e.g. refresh).
+--no-thumbs Do not regenerate thumbs when analyzing.
+--chapter-thumbs-only Only generate chapter thumbnails during generate pass
+--thumbOffset Percent offset into video for thumbnail image generated during media analysis.
+--artOffset Percent offset into video for fanart image generated during media analysis.
